@@ -10,6 +10,7 @@
         mc:Ignorable="d"
         x:Name="mainWindow"
         WindowStyle="None"
+        MouseDown="mainWindow_MouseDown"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
@@ -42,6 +43,9 @@
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewModel:OrdersViewModel}">
             <local:OrdersView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:TableViewModel}">
+            <local:TableView/>
         </DataTemplate>
 
     </Window.Resources>
@@ -212,12 +216,12 @@
 
                 <!--Hoa don-->
                 <RadioButton Style="{StaticResource menuButton}"
-                             
+                             Command="{Binding ShowTableViewCommand}"
                              Tag="#603814"
                              Margin="0,10,0,0">
                     <StackPanel Orientation="Horizontal">
                         <f:IconImage Icon="Gears" Style="{StaticResource menuIcon}"/>
-                        <TextBlock Text="Setting" Style="{StaticResource menuButtonText}" />
+                        <TextBlock Text="Table" Style="{StaticResource menuButtonText}" />
                     </StackPanel>
 
 

@@ -1,0 +1,164 @@
+﻿<UserControl x:Class="QUANLICAPHE.View.TableView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:local="clr-namespace:QUANLICAPHE.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}"></i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+
+
+    
+    <Border 
+            CornerRadius="10"
+            BorderThickness="0"
+            >
+
+
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#fff" Offset="0.25"></GradientStop>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer>
+            <Border CornerRadius="10,0,0,10">
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#fff" Offset="0.25"></GradientStop>
+                            <GradientStop Color="#0d0902" Offset="0.85"></GradientStop>
+                    </LinearGradientBrush>
+                    
+                </Border.Background>
+                    <StackPanel>
+                        <ItemsControl x:Name="ListTableProduct" ItemsSource="{Binding BAN}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Style="{StaticResource OrangeButton}"
+                                            Width="90"
+                                            Height="90"
+                                            Margin="15"
+                                            Background="#fabb73"
+                                           
+                                    >
+                                        <TextBlock VerticalAlignment="Center"
+                                                   HorizontalAlignment="Center"
+                                                   Text="{Binding name}"
+                                                   >
+
+                                        </TextBlock>
+
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+
+                        
+                    </StackPanel>
+
+            </Border >
+            </ScrollViewer>
+
+
+            <!--Phần bên phải-->
+
+            <Border Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--Nút thêm món-->
+
+                        <Button Style="{StaticResource OrangeButton}"
+                                Grid.Column="1" Margin="2,3,10,2"
+                                >
+
+                        </Button>
+                        
+                        <!--Combobox-->
+
+                        <ComboBox Grid.Row="0"
+                          Height="30"
+                          Margin="10,3,26,47"
+                          Text="Chọn món ăn"  
+                          Focusable="False"
+                          IsEditable="True"
+                          IsReadOnly="True"
+                          >
+                            <ComboBoxItem Name="Item1">Item1</ComboBoxItem>
+                            <ComboBoxItem Name="Item2">Item2</ComboBoxItem>
+                            <ComboBoxItem Name="Item3">Item3</ComboBoxItem>
+                            <ComboBoxItem Name="Item4">Item4</ComboBoxItem>
+                            <ComboBoxItem Name="Item5">Item5</ComboBoxItem>
+                            <ComboBoxItem Name="Item6">Item6</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Row="0"
+                          Height="30"
+                          Margin="104,37,26,13"
+                          Text="Số lượng"
+                          HorizontalContentAlignment="Right"
+                          Focusable="False"
+                          IsEditable="True"
+                          IsReadOnly="True"
+                          >
+                            <ComboBoxItem Name="Number1">1</ComboBoxItem>
+                            <ComboBoxItem Name="Number2">2</ComboBoxItem>
+                            <ComboBoxItem Name="Number3">3</ComboBoxItem>
+                            <ComboBoxItem Name="Number4">4</ComboBoxItem>
+                            <ComboBoxItem Name="Number5">5</ComboBoxItem>
+                            <ComboBoxItem Name="Number6">6</ComboBoxItem>
+                        </ComboBox>
+
+                    </Grid>
+                    <ListView d:ItemsSource="{d:SampleData ItemCount=0}"
+                          Margin="10,10,10,74"
+                          Grid.Row="1">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <Setter Property="BorderBrush" Value="#e3a127" />
+                                <Setter Property="BorderThickness" Value="3" />
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+
+            </Border>
+
+        </Grid>
+
+
+    </Border>
+</UserControl>

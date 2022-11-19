@@ -62,7 +62,7 @@ namespace QUANLICAPHE.ViewModel
         public ICommand ShowOrdersViewCommand { get; }
     
         public ICommand ShowCustomerViewCommand { get; }
-        public ICommand ShowSettingViewCommand { get; }
+        public ICommand ShowTableViewCommand { get; }
         public ICommand LoadedWindowCommand { get; }
 
         public bool IsLoaded = false;
@@ -129,12 +129,12 @@ namespace QUANLICAPHE.ViewModel
 
             });
 
-            //ShowSetting
-            ShowSettingViewCommand = new RelayCommand<UserControl>((p) => { return true; }, (p) =>
+            //ShowTable
+            ShowTableViewCommand = new RelayCommand<UserControl>((p) => { return true; }, (p) =>
             {
-                CurrentChildView = new SettingViewModel();
-                Caption = "Setting";
-                Icon = IconChar.Gears;
+                CurrentChildView = new TableViewModel();
+                Caption = "Table";
+                Icon = IconChar.Couch;
             });
 
             

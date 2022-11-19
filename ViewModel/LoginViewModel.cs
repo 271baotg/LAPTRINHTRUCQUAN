@@ -60,6 +60,8 @@ namespace QUANLICAPHE.ViewModel
                 IsLogin = false;
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
             }
+            IsLogin = true;
+            p.Close();
         }
 
         public static string Base64Encode(string plainText)

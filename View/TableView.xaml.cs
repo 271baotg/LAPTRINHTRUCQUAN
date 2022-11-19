@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QUANLICAPHE.Model;
+using QUANLICAPHE.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,24 +12,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace QUANLICAPHE.View
 {
     /// <summary>
-    /// Interaction logic for MainView.xaml
+    /// Interaction logic for TableView.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class TableView : UserControl
     {
-        public MainView()
+        public TableView()
         {
             InitializeComponent();
+            LoadTable();
         }
 
-        private void mainWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        public void LoadTable()
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
+            ListTableProduct.ItemsSource = DataProvider.Ins.DB.BANs.ToList();
         }
     }
 }

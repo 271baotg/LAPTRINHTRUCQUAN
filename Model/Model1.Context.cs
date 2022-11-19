@@ -13,10 +13,10 @@ namespace QUANLICAPHE.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QUANLICAPHEEntities : DbContext
+    public partial class QUANLICAPHEntities : DbContext
     {
-        public QUANLICAPHEEntities()
-            : base("name=QUANLICAPHEEntities")
+        public QUANLICAPHEntities()
+            : base("name=QUANLICAPHEntities")
         {
         }
     
@@ -25,6 +25,10 @@ namespace QUANLICAPHE.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<BAN> BANs { get; set; }
+        public virtual DbSet<BILL> BILLs { get; set; }
+        public virtual DbSet<BILLINFO> BILLINFOes { get; set; }
+        public virtual DbSet<FOOD> FOODs { get; set; }
         public virtual DbSet<USER> USERS { get; set; }
     }
 }

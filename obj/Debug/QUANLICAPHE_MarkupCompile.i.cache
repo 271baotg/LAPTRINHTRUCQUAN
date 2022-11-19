@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Tran Gia Bao\Desktop\COPY3\QuanLiQuanCafe-dev-BaoTG\obj\Debug\
+C:\Users\Tran Gia Bao\Desktop\QUANLICAPHEMAIN - Copy\QUANLICAPHE\obj\Debug\
 QUANLICAPHE
 none
 false
 DEBUG;TRACE
-C:\Users\Tran Gia Bao\Desktop\COPY3\QuanLiQuanCafe-dev-BaoTG\App.xaml
-11-1418123881
+C:\Users\Tran Gia Bao\Desktop\QUANLICAPHEMAIN - Copy\QUANLICAPHE\App.xaml
+12-1840318307
 2739969757
-281930475353
-23-314085029
-CustomControl\BindablePasswordBox.xaml;MainWindow.xaml;ResourceXAML\ButtonStyle.xaml;ResourceXAML\MainResource.xaml;View\CustomerView.xaml;View\Home.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainView.xaml;View\MenuView.xaml;View\OrdersView.xaml;
+332076089328
+231471410251
+CustomControl\BindablePasswordBox.xaml;MainWindow.xaml;ResourceXAML\ButtonStyle.xaml;ResourceXAML\MainResource.xaml;View\CustomerView.xaml;View\Home.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainView.xaml;View\MenuView.xaml;View\OrdersView.xaml;View\TableView.xaml;
 
-True
+False
 

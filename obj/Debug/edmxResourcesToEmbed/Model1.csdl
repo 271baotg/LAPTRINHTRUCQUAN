@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="QUANLICAPHEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="QUANLICAPHEModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="BAN">
     <Key>
       <PropertyRef Name="id" />
@@ -84,7 +84,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="QUANLICAPHEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="QUANLICAPHEEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="BANs" EntityType="Self.BAN" />
     <EntitySet Name="BILLs" EntityType="Self.BILL" />
     <EntitySet Name="BILLINFOes" EntityType="Self.BILLINFO" />
