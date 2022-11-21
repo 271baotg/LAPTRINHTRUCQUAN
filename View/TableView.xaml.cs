@@ -20,17 +20,33 @@ namespace QUANLICAPHE.View
     /// <summary>
     /// Interaction logic for TableView.xaml
     /// </summary>
+    
+    
     public partial class TableView : UserControl
     {
+        public string backcolor;
         public TableView()
         {
             InitializeComponent();
             LoadTable();
         }
 
+        
+
         public void LoadTable()
         {
             ListTableProduct.ItemsSource = DataProvider.Ins.DB.BANs.ToList();
+            
+            foreach (var product in DataProvider.Ins.DB.BANs)
+            {
+                
+                if (product.status == "Trống")
+                    product.color = "#e07109";
+                else
+                    product.color = "#93c971";
+            }
+
+            
         }
     }
 }

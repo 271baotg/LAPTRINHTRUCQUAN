@@ -9,12 +9,6 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
 
-    <i:Interaction.Triggers>
-        <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}"></i:InvokeCommandAction>
-        </i:EventTrigger>
-    </i:Interaction.Triggers>
-
 
 
     
@@ -53,7 +47,8 @@
                                             Width="90"
                                             Height="90"
                                             Margin="15"
-                                            Background="#fabb73"
+                                            Background="{Binding color}"
+                                            x:Name="TABLE"
                                            
                                     >
                                         <TextBlock VerticalAlignment="Center"

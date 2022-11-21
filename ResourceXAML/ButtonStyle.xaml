@@ -138,7 +138,9 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
-                            <Setter Property="Foreground" Value="#FF4788c8" />
+                            <Setter Property="Foreground" Value="#FF4788c8"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="Background" >
