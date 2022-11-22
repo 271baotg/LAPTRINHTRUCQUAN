@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:local="clr-namespace:QUANLICAPHE.View"
+             xmlns:local="clr-namespace:QUANLICAPHE.View" xmlns:viewmodel="clr-namespace:QUANLICAPHE.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:TableViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
@@ -40,7 +40,7 @@
                     
                 </Border.Background>
                     <StackPanel>
-                        <ItemsControl x:Name="ListTableProduct" ItemsSource="{Binding BAN}">
+                        <ItemsControl x:Name="ListTableProduct" ItemsSource="{Binding TableFood}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Button Style="{StaticResource OrangeButton}"
@@ -49,6 +49,7 @@
                                             Margin="15"
                                             Background="{Binding color}"
                                             x:Name="TABLE"
+                                            Click="TABLE_Click"
                                            
                                     >
                                         <TextBlock VerticalAlignment="Center"
@@ -135,7 +136,10 @@
                     </Grid>
                     <ListView d:ItemsSource="{d:SampleData ItemCount=0}"
                           Margin="10,10,10,74"
-                          Grid.Row="1">
+                          Grid.Row="1"
+                              >
+
+
                         <ListView.ItemContainerStyle>
                             <Style TargetType="{x:Type ListViewItem}">
                                 <Setter Property="BorderBrush" Value="#e3a127" />
@@ -143,9 +147,7 @@
                             </Style>
                         </ListView.ItemContainerStyle>
                         <ListView.View>
-                            <GridView>
-                                <GridViewColumn/>
-                            </GridView>
+                            <GridView/>
                         </ListView.View>
                     </ListView>
                 </Grid>

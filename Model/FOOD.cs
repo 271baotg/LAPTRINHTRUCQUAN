@@ -12,19 +12,21 @@ namespace QUANLICAPHE.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class FOOD
+    public partial class Food
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FOOD()
+        public Food()
         {
-            this.BILLINFOes = new HashSet<BILLINFO>();
+            this.BillInfoes = new HashSet<BillInfo>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
-        public int price { get; set; }
+        public int idCategory { get; set; }
+        public double price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BILLINFO> BILLINFOes { get; set; }
+        public virtual ICollection<BillInfo> BillInfoes { get; set; }
+        public virtual FoodCategory FoodCategory { get; set; }
     }
 }

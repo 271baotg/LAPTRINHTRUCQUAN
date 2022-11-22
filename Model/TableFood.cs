@@ -12,22 +12,20 @@ namespace QUANLICAPHE.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class BillInfo
+    public partial class TableFood
     {
-        public BillInfo(int id, int idBill, int idFood, int count)
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TableFood()
         {
-            this.id = id;
-            this.idBill = idBill;
-            this.idFood = idFood;
-            this.count = count;
+            this.Bills = new HashSet<Bill>();
         }
-
-        public int id { get; set; }
-        public int idBill { get; set; }
-        public int idFood { get; set; }
-        public int count { get; set; }
     
-        public virtual Bill Bill { get; set; }
-        public virtual Food Food { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string status { get; set; }
+        public string color { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Bill> Bills { get; set; }
     }
 }

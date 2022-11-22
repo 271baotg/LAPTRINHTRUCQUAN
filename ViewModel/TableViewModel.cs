@@ -18,8 +18,8 @@ namespace QUANLICAPHE.ViewModel
    
     public class TableViewModel : BaseViewModel, INotifyPropertyChanged
     {
-        private ObservableCollection<BAN> _banlist;
-        public ObservableCollection<BAN> BanList { get => _banlist; set { _banlist = value; OnPropertyChanged(); } }
+        private ObservableCollection<TableFood> _tablelist;
+        public ObservableCollection<TableFood> BanList { get => _tablelist; set { _tablelist = value; OnPropertyChanged(); } }
 
         public ICommand LoadTableView { get;}
 

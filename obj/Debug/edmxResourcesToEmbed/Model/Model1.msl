@@ -1,27 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="QUANLICAPHEModelStoreContainer" CdmEntityContainer="QUANLICAPHEntities">
-    <EntitySetMapping Name="BANs">
-      <EntityTypeMapping TypeName="QUANLICAPHEModel.BAN">
-        <MappingFragment StoreEntitySet="BAN">
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="QUANLICAPHEModel.Bill">
+        <MappingFragment StoreEntitySet="Bill">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DateCheckIn" ColumnName="DateCheckIn" />
+          <ScalarProperty Name="DateCheckOut" ColumnName="DateCheckOut" />
+          <ScalarProperty Name="idTable" ColumnName="idTable" />
           <ScalarProperty Name="status" ColumnName="status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="BILLs">
-      <EntityTypeMapping TypeName="QUANLICAPHEModel.BILL">
-        <MappingFragment StoreEntitySet="BILL">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idTable" ColumnName="idTable" />
-          <ScalarProperty Name="createdate" ColumnName="createdate" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="BILLINFOes">
-      <EntityTypeMapping TypeName="QUANLICAPHEModel.BILLINFO">
-        <MappingFragment StoreEntitySet="BILLINFO">
+    <EntitySetMapping Name="BillInfoes">
+      <EntityTypeMapping TypeName="QUANLICAPHEModel.BillInfo">
+        <MappingFragment StoreEntitySet="BillInfo">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idBill" ColumnName="idBill" />
           <ScalarProperty Name="idFood" ColumnName="idFood" />
@@ -29,12 +22,30 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="FOODs">
-      <EntityTypeMapping TypeName="QUANLICAPHEModel.FOOD">
-        <MappingFragment StoreEntitySet="FOOD">
+    <EntitySetMapping Name="Foods">
+      <EntityTypeMapping TypeName="QUANLICAPHEModel.Food">
+        <MappingFragment StoreEntitySet="Food">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="idCategory" ColumnName="idCategory" />
           <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FoodCategories">
+      <EntityTypeMapping TypeName="QUANLICAPHEModel.FoodCategory">
+        <MappingFragment StoreEntitySet="FoodCategory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TableFoods">
+      <EntityTypeMapping TypeName="QUANLICAPHEModel.TableFood">
+        <MappingFragment StoreEntitySet="TableFood">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="status" ColumnName="status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

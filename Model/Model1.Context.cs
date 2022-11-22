@@ -25,10 +25,11 @@ namespace QUANLICAPHE.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<BAN> BANs { get; set; }
-        public virtual DbSet<BILL> BILLs { get; set; }
-        public virtual DbSet<BILLINFO> BILLINFOes { get; set; }
-        public virtual DbSet<FOOD> FOODs { get; set; }
+        public virtual DbSet<Bill> Bills { get; set; }
+        public virtual DbSet<BillInfo> BillInfoes { get; set; }
+        public virtual DbSet<Food> Foods { get; set; }
+        public virtual DbSet<FoodCategory> FoodCategories { get; set; }
+        public virtual DbSet<TableFood> TableFoods { get; set; }
         public virtual DbSet<USER> USERS { get; set; }
     }
 }

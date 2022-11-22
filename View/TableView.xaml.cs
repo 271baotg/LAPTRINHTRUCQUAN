@@ -35,9 +35,9 @@ namespace QUANLICAPHE.View
 
         public void LoadTable()
         {
-            ListTableProduct.ItemsSource = DataProvider.Ins.DB.BANs.ToList();
+            ListTableProduct.ItemsSource = DataProvider.Ins.DB.TableFoods.ToList();
             
-            foreach (var product in DataProvider.Ins.DB.BANs)
+            foreach (var product in DataProvider.Ins.DB.TableFoods)
             {
                 
                 if (product.status == "Trống")
@@ -48,5 +48,16 @@ namespace QUANLICAPHE.View
 
             
         }
+
+        private void TABLE_Click(object sender, RoutedEventArgs e)
+        {
+            //int tableid = (sender as TableFood).id;
+            //ShowBill(tableid);
+        }
+
+        //private void ShowBill(int id)
+        //{
+        //    if (DataProvider.Ins.DB.BillInfoes.Where(b => b.id == id).)
+        //}
     }
 }

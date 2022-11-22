@@ -11,39 +11,19 @@ namespace QUANLICAPHE.Model
 {
     using System;
     using System.Collections.Generic;
-    using System.Data;
-    using System.Net;
-
-    public partial class BAN
+    
+    public partial class FoodCategory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-
-
-        public BAN(int id,string name,string status)
+        public FoodCategory()
         {
-            this.id = id;   
-            this.name = name;   
-            this.status = status;
-        }
-
-        public BAN(DataRow row )
-        {
-            this.id = (int)row["id"];
-            this.name = row["name"].ToString();
-            this.status = row["status"].ToString(); 
-        }
-        public BAN()
-        {
-            this.BILLs = new HashSet<BILL>();
+            this.Foods = new HashSet<Food>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
-        public string status { get; set; }
-
-        public string color { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BILL> BILLs { get; set; }
+        public virtual ICollection<Food> Foods { get; set; }
     }
 }

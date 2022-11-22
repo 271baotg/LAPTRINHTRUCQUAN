@@ -31,15 +31,7 @@ namespace QUANLICAPHE.Model
             DB = new QUANLICAPHEntities();
         }
 
-        public List<BAN> LoadTableList()
-        {
 
-            List<BAN> listban = new List<BAN>();
-
-            listban = DB.BANs.ToList();
-
-            return listban;
-        }
     }
 }
 
